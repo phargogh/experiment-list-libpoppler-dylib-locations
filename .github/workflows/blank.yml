@@ -26,8 +26,5 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Find libpoppler
-        run: find / -name "libpoppler.*.dylib"
-        
-      - name: find libfontconfig
-        run: find / -name "libfontconfig.*.dylib"
+      - name: Find libraries
+        run: find / -name "libpoppler.*.dylib" -o -name "libfontconfig.*.dylib"
